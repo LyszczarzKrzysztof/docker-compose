@@ -1,0 +1,16 @@
+Practice app.
+
+Based on https://www.youtube.com/watch?v=6c4-XJkDqC0
+
+
+Difficulitesbuild docker-compose app with database - its necessary to kill mysqld process.
+
+Necessary to include:
+     volumes:
+        - ./mysql/database:/var/lib/mysql
+        - ./mysql/dump:/docker-entrypoint-initdb.d/
+        
+in docker-compose.yml database part.
+
+Docker uses older versions of created images.
+Deleting older images before starting app is important.
