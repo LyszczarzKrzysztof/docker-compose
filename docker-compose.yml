@@ -28,3 +28,4 @@ services:
       MYSQL_DATABASE: "animaldb"
     ports:
     - "3306:3306"
+    restart: always

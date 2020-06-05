@@ -12,5 +12,5 @@ Necessary to include:
         
 in docker-compose.yml database part.
 
-Docker uses older versions of created images.
-Deleting older images before starting app is important.
+Docker uses older images even after changes in app and rebuilding docker containers.
+Refreshing images before starting app after changes is important.
