@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @RestController
 public class AnimalApi {
 
@@ -19,8 +21,8 @@ public class AnimalApi {
     }
 
     @GetMapping("/animals")
-    public Iterable<Animal> getAnimal(){
-        return animalRepository.findAll();
+    public List<Animal> getAnimals(){
+        return (List<Animal>) animalRepository.findAll();
     }
 
     @PostMapping("/animals")
